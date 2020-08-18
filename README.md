@@ -1,4 +1,4 @@
-# bigcity
+# Big City
 
 HTML/CSS excercise - to create a website based only on a Photoshop layout.
 
@@ -11,3 +11,5 @@ Layout:
 Live website:
 
 [living in a big city](https://plkujaw.github.io/bigcity/index.html)
+
+Layout made by [the awwwesomes](https://theawwwesomes.org/).
