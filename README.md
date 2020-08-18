@@ -10,6 +10,6 @@ Layout:
 
 Live website:
 
-[living in a big city](https://plkujaw.github.io/bigcity/index.html)
+[living in a big city](https://plkujaw.github.io/bigcity/)
 
 Layout made by [the awwwesomes](https://theawwwesomes.org/).
