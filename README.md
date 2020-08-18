@@ -1,6 +1,6 @@
 # Big City
 
-HTML/CSS excercise - to create a website based only on a Photoshop layout.
+HTML/CSS exercise - to create a website based only on a Photoshop layout.
 
 Used 'mobile-first' approach - styled everything for small screens first and then for a bigger screens.
 
