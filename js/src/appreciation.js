@@ -1,4 +1,4 @@
-class Appreciation {
+class AppreciationsCount {
   constructor(count) {
     this.count = count;
   }
@@ -7,4 +7,4 @@ class Appreciation {
   }
 }
 
-export default Appreciation;
+export default AppreciationsCount;
