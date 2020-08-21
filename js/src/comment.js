@@ -1,6 +1,7 @@
 class Comment {
-  constructor(content) {
+  constructor(content, author) {
     this.content = content;
+    this.author = author;
   }
 }
 
