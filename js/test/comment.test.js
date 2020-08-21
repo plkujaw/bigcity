@@ -5,6 +5,11 @@ test("comment should have a content", () => {
   expect(comment.content).toBe("awesome content, well done!");
 });
 
+test("checks if comment content provided", () => {
+  const comment = new Comment("awesome content, well done!");
+  expect(comment.isEmpty()).toBe(false);
+});
+
 test("comment should have an author", () => {
   const comment = new Comment("awesome content, well done!", "author");
   expect(comment.author).toBe("author");
