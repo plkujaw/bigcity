@@ -1,5 +1,5 @@
 class Comment {
-  constructor(content, author) {
+  constructor(content, author = "anonymous") {
     this.content = content;
     this.author = author;
   }

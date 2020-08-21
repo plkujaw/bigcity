@@ -6,8 +6,8 @@ test("comment should have a content", () => {
 });
 
 test("comment should have an author", () => {
-  const comment = new Comment("awesome content, well done!", "username");
-  expect(comment.author).toBe("username");
+  const comment = new Comment("awesome content, well done!", "author");
+  expect(comment.author).toBe("author");
 });
 
 test("if author name not given, should be anonymous", () => {
