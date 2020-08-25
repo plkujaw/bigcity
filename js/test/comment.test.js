@@ -20,7 +20,7 @@ test("if author name not given, should be anonymous", () => {
   expect(comment.author).toBe("anonymous");
 });
 
-test("comment should have a timestamp with date and time", () => {
+test("comment should have a timestamp with current date and time", () => {
   const comment = new Comment("awesome content, well done!");
   const timestamp = "25.08.2020 15:25";
   expect(comment.timestamp).toBe(timestamp);

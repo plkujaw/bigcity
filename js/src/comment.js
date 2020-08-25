@@ -2,6 +2,7 @@ class Comment {
   constructor(content, author = "anonymous") {
     this.content = content;
     this.author = author;
+    this.timestamp = "25.08.2020 15:25";
   }
   isEmpty() {
     const content = this.content;
