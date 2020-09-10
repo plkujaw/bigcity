@@ -1,15 +1,16 @@
 # Big City
 
-HTML/CSS exercise - to create a website based only on a Photoshop layout.
+The task is to create a website based only on a Photoshop design/layout.
 
-Used 'mobile-first' approach - styled everything for small screens first and then for a bigger screens.
+For responsive design I used 'mobile-first' approach - styled website for a small screens first and then for a bigger screens.
+Used HTML5, CSS3, JavaScript and Jest for unit testing.
 
-Layout:
+Live website: </br>
+[living in a big city](https://plkujaw.github.io/bigcity/)
 
+Basic layout: </br>
 ![Bigcity Layout](/layout.png)
 
-Live website:
 
-[living in a big city](https://plkujaw.github.io/bigcity/)
 
 Layout made by [the awwwesomes](https://theawwwesomes.org/).
