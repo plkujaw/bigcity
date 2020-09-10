@@ -1,5 +1,5 @@
 # Big City
-Work in progress
+*Work in progress*
 
 The task is to create a functional website based only on a Photoshop design/layout.
 
