@@ -114,27 +114,31 @@
     </section>
     <!-- buttons -->
     <section class="bottom-buttons">
-      <button class="btn" id="comment">comment</button>
-      <button class="btn" id="share">share</button>
-      <button class="btn" id="appreciate">appreciate</button>
+      <button class="btn" id="comment-btn">comment</button>
+      <button class="btn" id="share-btn">share</button>
+      <button class="btn" id="appreciate-btn">appreciate</button>
     </section>
     <!-- comment form -->
-    <section class="comment-form-container">
-      <form class="comment-form__author-input" id="comment-form">
+    <section class="comment-form-container hide">
+      <form class="comment-form-container__author-input" id="comment-form">
         <label for="author">author:</label>
         <input type="text" id="author" name="author" />
       </form>
-      <section class="comment-form__comment-input">
+      <section class="comment-form-container__comment-input">
         <textarea
           id="comment-input-textarea"
           name="comment"
           form="comment-form"
-        >
-enter text here...</textarea
-        >
+          placeholder="enter text here..."
+        ></textarea>
       </section>
-      <section class="comment-form__submit-button">
-        <button type="submit" class="btn" form="comment-form">
+      <section class="comment-form-container__submit-button">
+        <button
+          type="submit"
+          class="btn"
+          id="submit-comment "
+          form="comment-form"
+        >
           add comment
         </button>
       </section>
