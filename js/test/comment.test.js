@@ -22,13 +22,13 @@ test("if author name not given, should be anonymous", () => {
 
 test("comment should have a timestamp with current date and time", () => {
   const comment = new Comment("awesome content, well done!");
-  const date = new Date();
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-  const hour = date.getHours();
-  const mins = date.getMinutes();
+  const date = new Date().toLocaleString();
+  // const day = date.getDate();
+  // const month = date.getMonth() + 1;
+  // const year = date.getFullYear();
+  // const hour = date.getHours();
+  // const mins = date.getMinutes();
 
-  const timestamp = `${day}.${month}.${year} ${hour}:${mins}`;
+  const timestamp = date;
   expect(comment.timestamp).toBe(timestamp);
 });

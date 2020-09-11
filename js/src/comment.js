@@ -2,7 +2,10 @@ class Comment {
   constructor(content, author = "anonymous") {
     this.content = content;
     this.author = author;
-    this.timestamp = "25.08.2020 15:25";
+    this.timestamp = getTimestamp();
+    function getTimestamp() {
+      return new Date().toLocaleString();
+    }
   }
   isEmpty() {
     const content = this.content;
