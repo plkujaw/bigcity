@@ -118,20 +118,27 @@
       <button class="btn" id="share">share</button>
       <button class="btn" id="appreciate">appreciate</button>
     </section>
-    <!-- comments form -->
-    <form class="comment-form">
-      <section class="comment-form__author-input">
-        <label for="author">author</label>
+    <!-- comment form -->
+    <section class="comment-form-container">
+      <form class="comment-form__author-input" id="comment-form">
+        <label for="author">author:</label>
         <input type="text" id="author" name="author" />
-      </section>
+      </form>
       <section class="comment-form__comment-input">
-        <label for="comment">comment</label>
-        <input type="text" id="comment" name="comment" />
+        <textarea
+          id="comment-input-textarea"
+          name="comment"
+          form="comment-form"
+        >
+enter text here...</textarea
+        >
       </section>
       <section class="comment-form__submit-button">
-        <button type="submit" class="btn">add comment</button>
+        <button type="submit" class="btn" form="comment-form">
+          add comment
+        </button>
       </section>
-    </form>
+    </section>
     <footer>
       <section class="social-links">
         <ul>
