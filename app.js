@@ -4,9 +4,11 @@ import Comment from "./js/src/comment.js";
 const appreciateBtn = document.getElementById("appreciate-btn");
 const appreciationCount = document.querySelector(".appreciations span");
 
-const commentForm = document.querySelector(".comment-form-container");
+const commentFormDiv = document.querySelector(".comment-form-container");
 const commentBtn = document.getElementById("comment-btn");
-const addCommentBtn = document.getElementById("add-comment");
+const commentForm = document.getElementById("comment-form");
+// const addCommentBtn = document.getElementById("add-comment");
+const comments = document.querySelector(".comments-list");
 
 const appreciations = new AppreciationsCount(
   parseInt(appreciationCount.textContent)
@@ -18,21 +20,25 @@ appreciateBtn.addEventListener("click", () => {
 });
 
 commentBtn.addEventListener("click", () => {
-  commentForm.classList.toggle("hide");
+  commentFormDiv.classList.toggle("hide");
 });
 
-addCommentBtn.addEventListener("click", (e) => {
+commentForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addComment();
-  // displayComment();
-  commentForm.classList.add("hide");
+  commentFormDiv.classList.add("hide");
+  document.getElementById("author").value = "";
+  document.getElementById("comment-input-textarea").value = "";
 });
 
 function addComment() {
   const commentAuthor = document.getElementById("author").value;
-  // console.log(commentAuthor);
   const commentContent = document.getElementById("comment-input-textarea")
     .value;
-  // console.log(commentContent);
   const comment = new Comment(commentContent, commentAuthor);
+  const commentDiv = document.createElement("article");
+  commentDiv.classList.add("comment");
+  commentDiv.innerHTML = `by ${comment.author} @${comment.timestamp} </br>
+  ${comment.content}`;
+  comments.appendChild(commentDiv);
 }

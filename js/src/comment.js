@@ -4,7 +4,7 @@ class Comment {
     this.author = author;
     this.timestamp = getTimestamp();
     function getTimestamp() {
-      return new Date().toLocaleString();
+      return new Date().toLocaleString("tr-TR");
     }
   }
   isEmpty() {
