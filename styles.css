@@ -39,11 +39,13 @@ body {
   background: white;
   color: black;
   font-family: var(--paragraph-font);
+
   font-size: 1rem;
   line-height: 1.35;
 }
 a {
   text-decoration: none;
+  color: black;
 }
 img {
   width: 100%;
@@ -78,6 +80,7 @@ h2 {
 .hide {
   display: none;
 }
+
 /* 
 =====
 Header
