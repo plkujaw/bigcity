@@ -118,49 +118,45 @@
       <button class="btn a2a_dd" id="share-btn">
         <!-- AddToAny BEGIN -->
         <a href="https://www.addtoany.com/share">Share</a>
-        <script async src="https://static.addtoany.com/menu/page.js"></script>
+
         <!-- AddToAny END -->
       </button>
 
       <button class="btn" id="appreciate-btn">appreciate</button>
     </section>
     <!-- comments section-->
-    <section class="comments">
-      <!-- comment input form -->
-      <section class="comment-form-container hide">
-        <form class="comment-form-container__author-input" id="comment-form">
-          <label for="author">author:</label>
-          <input type="text" id="author" name="author" />
-        </form>
-        <section class="comment-form-container__comment-input">
-          <textarea
-            id="comment-input-textarea"
-            name="comment"
-            form="comment-form"
-            placeholder="enter text here..."
-          ></textarea>
-        </section>
-        <section class="comment-form-container__submit-button">
-          <button
-            type="submit"
-            class="btn"
-            id="add-comment"
-            form="comment-form"
-          >
-            add comment
-          </button>
-        </section>
-      </section>
-      <!-- end of comment input form -->
 
-      <!-- comments list -->
+    <!-- comment input form -->
+    <section class="comment-form-container hide">
+      <form class="comment-form-container__author-input" id="comment-form">
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" />
+      </form>
+      <section class="feedback hide"></section>
+      <section class="comment-form-container__comment-input">
+        <textarea
+          id="comment-input-textarea"
+          name="comment"
+          form="comment-form"
+          placeholder="Enter text here..."
+        ></textarea>
+      </section>
+      <section class="comment-form-container__submit-button">
+        <button type="submit" class="btn" id="add-comment" form="comment-form">
+          add comment
+        </button>
+      </section>
       <section class="comments-list">
         <!-- single comment -->
         <!-- <article class="comment"></article> -->
         <!-- end of single comment -->
       </section>
-      <!-- end of comments list -->
     </section>
+    <!-- end of comment input form -->
+
+    <!-- comments list -->
+    <!-- end of comments list -->
+
     <!-- end of comments section-->
     <footer>
       <section class="social-links">
@@ -196,5 +192,6 @@
       </section>
     </footer>
     <script type="module" src="./app.js"></script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
   </body>
 </html>

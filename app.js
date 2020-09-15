@@ -9,7 +9,7 @@ const commentBtn = document.getElementById("comment-btn");
 const commentForm = document.getElementById("comment-form");
 // const addCommentBtn = document.getElementById("add-comment");
 const comments = document.querySelector(".comments-list");
-
+const feedback = document.querySelector(".feedback");
 const appreciations = new AppreciationsCount(
   parseInt(appreciationCount.textContent)
 );
@@ -26,7 +26,7 @@ commentBtn.addEventListener("click", () => {
 commentForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addComment();
-  commentFormDiv.classList.add("hide");
+  // commentFormDiv.classList.add("hide");
   document.getElementById("author").value = "";
   document.getElementById("comment-input-textarea").value = "";
 });
@@ -37,8 +37,22 @@ function addComment() {
     .value;
   const comment = new Comment(commentContent, commentAuthor);
   const commentDiv = document.createElement("article");
-  commentDiv.classList.add("comment");
-  commentDiv.innerHTML = `by ${comment.author} @${comment.timestamp} </br>
+
+  if (comment.isEmpty()) {
+    feedback.classList.remove("hide");
+    feedback.innerHTML = `<p> Please enter some text </p>`;
+    setTimeout(function () {
+      feedback.classList.add("hide");
+    }, 3000);
+  } else {
+    commentDiv.classList.add("comment");
+    if (comment.hasNoAuthor()) {
+      commentDiv.innerHTML = `by <strong>anonymous</strong> @${comment.timestamp} </br>
   ${comment.content}`;
-  comments.appendChild(commentDiv);
+    } else {
+      commentDiv.innerHTML = `by <strong>${comment.author}</strong> @${comment.timestamp} </br>
+  ${comment.content}`;
+    }
+    comments.appendChild(commentDiv);
+  }
 }

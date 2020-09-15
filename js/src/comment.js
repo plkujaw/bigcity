@@ -17,6 +17,16 @@ class Comment {
       return false;
     }
   }
+  hasNoAuthor() {
+    const author = this.author;
+    const regex = /\S+/g; // matches any non-whitespace character
+    const match = author.match(regex) || []; // we use || [] because match returns null if there is no match and throws an error
+    if (match.length === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 export default Comment;
